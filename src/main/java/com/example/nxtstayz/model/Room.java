@@ -21,7 +21,7 @@ public class Room {
     @Column(name = "roomnumber")
     private String roomNumber;
     @Column(name = "type")
-    private String type;
+    private String roomType;
     @Column(name = "price")
     private double price;
     @ManyToOne
@@ -30,14 +30,6 @@ public class Room {
 
     public Room() {
 
-    }
-
-    public Room(int roomId, String roomNumber, String type, double price, Hotel hotel) {
-        this.roomId = roomId;
-        this.roomNumber = roomNumber;
-        this.type = type;
-        this.price = price;
-        this.hotel = hotel;
     }
 
     public int getRoomId() {
@@ -57,11 +49,11 @@ public class Room {
     }
 
     public String getRoomType() {
-        return type;
+        return roomType;
     }
 
-    public void setRoomType(String type) {
-        this.type = type;
+    public void setRoomType(String roomType) {
+        this.roomType = roomType;
     }
 
     public double getPrice() {
