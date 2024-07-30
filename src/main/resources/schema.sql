@@ -8,7 +8,7 @@ create table hotel(
 create table room(
     id int primary key auto_increment;
     roomNumber varchar(255),
-    roomType varchar(255),
+    type varchar(255),
     price double,
     hotelId int,
     foreign key(hotelId) references hotel(id)
