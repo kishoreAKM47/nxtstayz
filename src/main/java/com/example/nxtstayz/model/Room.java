@@ -15,8 +15,8 @@ import javax.persistence.*;
 @Table(name = "room")
 public class Room {
     @Id
-    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int roomId;
     @Column(name = "roomnumber")
     private String roomNumber;
@@ -30,6 +30,13 @@ public class Room {
 
     public Room() {
 
+    }
+    public Room(int roomId, String roomNumber, String roomType, double price, Hotel hotel) {
+        this.roomId = roomId;
+        this.roomNumber = roomNumber;
+        this.roomType = roomType;
+        this.price = price;
+        this.hotel = hotel;
     }
 
     public int getRoomId() {
